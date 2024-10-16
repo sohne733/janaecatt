@@ -1,0 +1,56 @@
+.photo-container {
+    display: flex; /* Use flexbox to align images side by side */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    position: relative; /* For positioning the text over the images */
+    gap: 20px; /* Add space between the images */
+    width: 100%; /* Make sure the container is full width */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+.responsive-image {
+    width: 45%; /* Make each image take up 45% of the container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure proper block display */
+    transition: filter 0.3s ease; /* Smooth transition for blur effect */
+}
+
+.photo-container:hover .responsive-image {
+    filter: blur(5px); /* Apply blur to both images when hovering over the container */
+}
+
+.hover-title, .hover-title2, .hover-text {
+    display: none; /* Initially hide the title and text */
+    position: absolute; /* Position them over the images */
+    color: #ffffff; /* Text color */
+    padding: 20px; /* Padding around the text */
+    text-align: center; /* Center text */
+    z-index: 10; /* Ensure text is above images */
+  
+
+}
+.hover-title{
+    font-family: "Playfair Display", serif;
+    font-size: 120px;
+    font-weight: 400;
+    transform: translate(-105%,-20%);
+}
+.hover-title2{
+    font-family: "Playfair Display", serif;
+    font-size: 120px;
+    font-weight: 400;
+    transform: translate(-60%,40%);
+}
+.hover-text{
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    font-weight: 400;
+    width: 500px;
+    transform: translate(60%,20%);
+text-align: center;
+}
+
+.photo-container:hover .hover-title, .photo-container:hover .hover-title2,
+.photo-container:hover .hover-text {
+    display: block; /* Show title and text when hovering over the photo container */
+}
